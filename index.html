@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff0a8">
+  <title>Ruang Kelas TJKT 4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-pink"></div><div class="ambient ambient-yellow"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Ruang Kelas TJKT 4">
+      <span class="brand-mark">✿</span><span>ruang kelas <b>TJKT 4</b></span>
+    </a>
+    <button id="mobile-menu" class="menu-toggle" aria-label="Buka menu">☰</button>
+    <nav id="main-nav" class="nav hidden">
+      <button class="nav-link active" data-page="home">Beranda</button>
+      <button class="nav-link" data-page="profil">Profil</button>
+      <button class="nav-link" data-page="info">Info Kelas</button>
+      <button class="nav-link" data-page="teori">Jadwal Teori</button>
+      <button class="nav-link" data-page="bengkel">Jadwal Bengkel</button>
+      <button class="nav-link" data-page="piket">Piket</button>
+      <button id="logout-btn" class="logout-btn">Keluar ↗</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="auth-view" class="auth-layout">
+      <div class="auth-intro">
+        <span class="eyebrow">✦ TEMPAT KECIL, CERITA BESAR</span>
+        <h1>Belajar bareng,<br><span>tumbuh bareng.</span></h1>
+        <p>Selamat datang di ruang digital kelas TJKT 4. Tempat berbagi jadwal, info kelas, dan semangat belajar.</p>
+        <div class="floating-note note-yellow">📚 Jangan lupa belajar!</div>
+        <div class="floating-note note-pink">♡ Kamu pasti bisa</div>
+        <div class="doodle">✿ ✧ ♡</div>
+      </div>
+      <div class="auth-card">
+        <div class="auth-tabs">
+          <button id="tab-login" class="auth-tab active">Masuk</button>
+          <button id="tab-register" class="auth-tab">Buat akun</button>
+        </div>
+        <div class="auth-heading">
+          <span class="mini-icon">🌷</span>
+          <h2 id="auth-title">Hai, selamat datang!</h2>
+          <p id="auth-subtitle">Masuk dulu, yuk.</p>
+        </div>
+        <form id="login-form" class="auth-form">
+          <label for="login-username">Username</label>
+          <input id="login-username" name="username" autocomplete="username" placeholder="Masukkan username" required maxlength="24">
+          <label for="login-password">Password</label>
+          <input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Masukkan password" required>
+          <button class="primary-btn" type="submit">Masuk ke kelas <span>→</span></button>
+          <p class="form-foot">Belum punya akun? <button type="button" id="go-register" class="text-btn">Daftar di sini</button></p>
+        </form>
+        <form id="register-form" class="auth-form hidden">
+          <label for="reg-name">Nama lengkap</label>
+          <input id="reg-name" name="name" autocomplete="name" placeholder="Nama kamu" required maxlength="60">
+          <label for="reg-username">Username</label>
+          <input id="reg-username" name="username" autocomplete="username" placeholder="Buat username" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_]+" title="Gunakan huruf, angka, atau garis bawah saja.">
+          <label for="reg-password">Password</label>
+          <input id="reg-password" name="password" type="password" autocomplete="new-password" placeholder="Minimal 6 karakter" required minlength="6">
+          <label for="reg-confirm">Ulangi password</label>
+          <input id="reg-confirm" name="confirm" type="password" autocomplete="new-password" placeholder="Ketik ulang password" required minlength="6">
+          <button class="primary-btn" type="submit">Buat akun <span>♡</span></button>
+          <p class="form-foot">Sudah punya akun? <button type="button" id="go-login" class="text-btn">Masuk</button></p>
+        </form>
+        <p id="auth-message" class="message" role="status" aria-live="polite"></p>
+        <p class="local-warning">🔒 Akun hanya tersimpan di browser/perangkat ini. Jangan gunakan password penting.</p>
+      </div>
+    </section>
+
+    <section id="app-view" class="hidden">
+      <div class="page-wrap">
+        <div class="welcome-banner">
+          <div><span class="eyebrow">HALO, TEMAN TJKT! ✨</span><h1 id="welcome-title">Selamat datang!</h1><p>Semoga hari ini ada ilmu baru yang kamu bawa pulang.</p></div>
+          <div class="banner-art" aria-hidden="true">🌼<span>♡</span></div>
+        </div>
+        <div class="quick-stats">
+          <article class="stat-card yellow"><span>🗓️</span><div><small>Hari ini</small><b id="today-label">Hari yang baik</b></div></article>
+          <article class="stat-card pink"><span>🎒</span><div><small>Kelas kita</small><b>X TJKT 4</b></div></article>
+          <article class="stat-card lilac"><span>💻</span><div><small>Jurusan</small><b>Teknik Jaringan</b></div></article>
+        </div>
+        <div class="section-heading"><div><span class="eyebrow">JELAJAHI</span><h2>Sudut ruang kelas</h2></div><span class="tiny-flower">✿</span></div>
+        <div class="feature-grid">
+          <button class="feature-card feature-yellow" data-page="profil"><span class="feature-emoji">👩🏻‍🎓</span><span class="feature-title">Profil Saya</span><span class="feature-desc">Kenalan lebih dekat</span><span class="feature-arrow">↗</span></button>
+          <button class="feature-card feature-pink" data-page="info"><span class="feature-emoji">📌</span><span class="feature-title">Info Kelas</span><span class="feature-desc">Catatan dan pengumuman</span><span class="feature-arrow">↗</span></button>
+          <button class="feature-card feature-lilac" data-page="teori"><span class="feature-emoji">📖</span><span class="feature-title">Jadwal Teori</span><span class="feature-desc">Cek pelajaran harian</span><span class="feature-arrow">↗</span></button>
+          <button class="feature-card feature-mint" data-page="bengkel"><span class="feature-emoji">🛠️</span><span class="feature-title">Jadwal Bengkel</span><span class="feature-desc">Siap praktik dengan aman</span><span class="feature-arrow">↗</span></button>
+          <button class="feature-card feature-peach" data-page="piket"><span class="feature-emoji">🧹</span><span class="feature-title">Jadwal Piket</span><span class="feature-desc">Kelas nyaman, belajar tenang</span><span class="feature-arrow">↗</span></button>
+        </div>
+        <div class="quote-card"><span>“</span><p>Langkah kecil hari ini bisa jadi keahlian hebat di masa depan.</p><small>— Teman belajar TJKT 4</small></div>
+      </div>
+    </section>
+
+    <section id="content-view" class="hidden">
+      <div class="page-wrap content-wrap">
+        <button id="back-home" class="back-link">← Kembali ke beranda</button>
+        <div id="content-container"></div>
+      </div>
+    </section>
+  </main>
+  <footer><span>✿ Ruang Kelas TJKT 4</span><span>Dibuat untuk belajar bersama · 2026</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
